@@ -1,0 +1,13 @@
+app:
+  name: cart-api
+  namespace: cesi-eats
+  image:
+    repository: ghcr.io/cesi-eats/cart_api
+    tag: latest
+
+dependencies:
+  lapinou:
+    uri: amqp://rabbitmq-service.cesi-eats.svc.cluster.local:5672
+
+  database:
+    uri: mongodb://armanddebesse.fr:27017/cart_db
